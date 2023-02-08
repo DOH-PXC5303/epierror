@@ -57,7 +57,7 @@ selectquote <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) 
 
   if (!author & !book) return(paste0(qpunct, unformatted_quote, qpunct))
 
-  if (book) return(paste0(qpunct, unformatted_quote, qpunct, ifelse(nline, '\n', ' '), '-', epierror::quotations$book[i]))
+  if (book) return(paste0(qpunct, unformatted_quote, qpunct, ifelse(nline, '\n', ' '), '-', epierror::quotations$book[i], ' (Epidemiologist Revised Ed.)'))
 
   if (author) return(paste0(qpunct, unformatted_quote, qpunct, ifelse(nline, '\n', ' '), '-', epierror::quotations$author[i]))
 
@@ -128,7 +128,7 @@ selectquote.html <- function(author = TRUE, book = TRUE, qpunct = '', nline = FA
 
   if (!author & !book) return(paste0(qpunct, html_quote, qpunct))
 
-  if (book) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-_', epierror::quotations$book[i], "_"))
+  if (book) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-_', epierror::quotations$book[i], ' (Epidemiologist Revised Ed.)_'))
 
   if (author) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-', epierror::quotations$author[i]))
 
