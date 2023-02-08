@@ -1,12 +1,12 @@
 #' Select one random quote
 #'
 #' Select a quote from \code{quotations} data.frame (included in package) and return the quote along with the author and/or book (if indicated) as one character element.
-#' Newlines, when included, are given as '\n'.
+#' Newlines, when included, are given as \code{'\\n'}.
 #'
 #' @param author Logical element: TRUE (default) or FALSE. Indicates whether author name should be included with returned quotation.
 #' @param book Logical element: TRUE (default) or FALSE. Indicates whether book title should be included with returned quotation.
 #' @param qpunct Character element. The supplied character precedes and follows the quotation characters. Defaults to empty character. Suggest default, \code{"'"}, or \code{'"'}.
-#' @param nline Logical element: TRUE or FALSE (default). Indicates whether newline characters (\code{'\n'}) should be included where line breaks should be.
+#' @param nline Logical element: TRUE or FALSE (default). Indicates whether newline characters (\code{'\\n'}) should be included where line breaks should be.
 #'
 #' @return Character element with randomly selected quote, followed by author and book (if indicated).
 #' @export
@@ -71,12 +71,12 @@ selectquote <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) 
 #' Select one random quote with HTML formatting
 #'
 #' Select a quote from \code{quotations} data.frame (included in package) and return the quote along with the author and/or book (if indicated) as one character element.
-#' Newlines, when included, are given as '<br />'. Other formatting, such as italicizing book titles, is done with HTML formatting.
+#' Newlines, when included, are given as \code{'<br />'}. Other formatting, such as italicizing book titles, is done with HTML formatting.
 #'
 #' @param author Logical element: TRUE (default) or FALSE. Indicates whether author name should be included with returned quotation.
 #' @param book Logical element: TRUE (default) or FALSE. Indicates whether book title should be included with returned quotation.
 #' @param qpunct Character element. The supplied character precedes and follows the quotation characters. Defaults to empty character. Suggest default, \code{"'"}, or \code{'"'}.
-#' @param nline Logical element: TRUE or FALSE (default). Indicates whether newline characters (\code{'\n'}) should be included where line breaks should be.
+#' @param nline Logical element: TRUE or FALSE (default). Indicates whether newline characters (\code{'\\n'}) should be included where line breaks should be.
 #'
 #' @return Character element with randomly selected quote, followed by author and book (if indicated).
 #' @export
