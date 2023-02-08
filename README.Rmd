@@ -1,0 +1,63 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# epierror
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of epierror is to make errors fun for epidemiologists.
+
+## Installation
+
+You can install the development version of epierror from [GitHub](https://github.com/DOH-PXC5303/epierror.git) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("DOH-PXC5303/epierror")
+```
+
+## Example
+
+Use epierror::selectquote() to pull a random quote:
+
+```{r select}
+library(epierror)
+
+selectquote()
+
+```
+
+You can also print newlines or send to the console with cat:
+
+```{r cat}
+cat(selectquote(nline = T))
+```
+
+Formatting quotes in HTML for use in Blastula using epierror::selectquote.html():
+
+```{r html}
+selectquote.html()
+
+# Include a <br /> tag for a newline:
+selectquote.html(nline = T)
+```
+
+Finally, quotes can be pulled as a data.frame using epierror::getquotes():
+
+```{r get}
+# Select 2 random quotes
+getquotes(2)
+```
