@@ -24,12 +24,12 @@ getquotes <- function(n) {
     return(invisible(NULL))
   }
 
-  if (n > nrow(quotations)) {
-    warning('`n` is greater than the quotes available in `quotations`. Returning all available quotes.')
-    n = nrow(quotations)
+  if (n > nrow(epierror::quotations)) {
+    warning('`n` is greater than the quotes available in `epierror::quotations`. Returning all available quotes.')
+    n = nrow(epierror::quotations)
   }
 
-  return(quotations[sample(1:nrow(quotations), n), ])
+  return(epierror::quotations[sample(1:nrow(epierror::quotations), n), ])
 
 
 }
