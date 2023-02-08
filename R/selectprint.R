@@ -1,7 +1,7 @@
 #' Select one random quote
 #'
 #' Select a quote from \code{quotations} data.frame (included in package) and return the quote along with the author and/or book (if indicated) as one character element.
-#' Newlines, when included, are given as '\n'. HTML formatting should be done with the related selectquote.html function.
+#' Newlines, when included, are given as '\n'.
 #'
 #' @param author Logical element: TRUE (default) or FALSE. Indicates whether author name should be included with returned quotation.
 #' @param book Logical element: TRUE (default) or FALSE. Indicates whether book title should be included with returned quotation.
@@ -19,7 +19,9 @@
 #'
 #' @author Philip Crain <philip.crain@doh.wa.gov>
 #'
-#' @seealso \link[epierror]{selectquote.html}
+#' @seealso
+#' * \link[epierror]{selectquote.html} selects quotes with HTML formatting
+#' * \link[epierror]{getquotes} selects multiple quotes and return a data.frame
 selectquote <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) {
 
   if (!is.logical(author)) {
@@ -64,16 +66,6 @@ selectquote <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) 
 
 
 
-
-printquote <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) {
-  print(selectquote(author, book, qpunct, nline))
-}
-
-
-
-
-
-
 selectquote.html <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) {
 
   if (!is.logical(author)) {
@@ -114,12 +106,4 @@ selectquote.html <- function(author = TRUE, book = TRUE, qpunct = '', nline = FA
 
   if (author) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-', quotations$author[i]))
 
-}
-
-
-
-
-
-printquote.html <- function(author = TRUE, book = TRUE, qpunct = '', nline = FALSE) {
-  print(selectquote.html(author, book, qpunct, nline))
 }
