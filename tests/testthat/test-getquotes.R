@@ -1,0 +1,12 @@
+test_that("getquotes: output works", {
+  expect_type(getquotes(1), "list")
+  expect_identical(class(getquotes(2)), "data.frame")
+  expect_equal(nrow(getquotes(20)), 20)
+  expect_equal(suppressWarnings(nrow(getquotes(9999))), nrow(epierror::quotations))
+  expect_warning(nrow(getquotes(9999)))
+  expect_equal(ncol(getquotes(13)), 3)
+  expect_identical(names(getquotes(22)), c("quote", "author", "book"))
+  expect_type(getquotes(33)$quote, "character")
+  expect_type(getquotes(29)$author, "character")
+  expect_type(getquotes(29)$book, "character")
+})
