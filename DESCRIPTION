@@ -1,12 +1,10 @@
 Package: epierror
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Provides book quotations edited to include themes of epidemiology and scripting errors
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Philip", "Crain", , "philip.crain@doh.wa.gov", role = c("aut", "cre"))
+Description: Functions to select and/or print quotations from classic literature. These quotes have been edited by epidemiologists at the Washington State Department of Health. `quotations` is a data.frame object which includes all quotes the package utilizes. Quotations are paired with their original source book and original author.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
