@@ -123,12 +123,12 @@ selectquote.html <- function(author = TRUE, book = TRUE, qpunct = '', nline = FA
   if (author & book) {
     return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '),
                   '-', epierror::quotations$author[i],
-                  ', _', epierror::quotations$book[i], ' (Epidemiologist Revised Ed.)_'))
+                  ', <i>', epierror::quotations$book[i], ' (Epidemiologist Revised Ed.)</i>'))
   }
 
   if (!author & !book) return(paste0(qpunct, html_quote, qpunct))
 
-  if (book) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-_', epierror::quotations$book[i], ' (Epidemiologist Revised Ed.)_'))
+  if (book) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-<i>', epierror::quotations$book[i], ' (Epidemiologist Revised Ed.)</i>'))
 
   if (author) return(paste0(qpunct, html_quote, qpunct, ifelse(nline, '<br />', ' '), '-', epierror::quotations$author[i]))
 
