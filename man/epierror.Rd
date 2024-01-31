@@ -8,6 +8,14 @@
 \description{
 Easily include moody quotes in your error messages or emails.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/DOH-PXC5303/epierror}
+  \item Report bugs at \url{https://github.com/DOH-PXC5303/epierror/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Philip Crain \email{philip.crain@doh.wa.gov}
 
