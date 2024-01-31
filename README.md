@@ -26,15 +26,15 @@ Use epierror::selectquote() to pull a random quote:
 library(epierror)
 
 selectquote()
-#> [1] "O, that this too too solid error would melt Thaw and resolve itself into a dew! Or that the Epidemiologist had not fix'd His canon 'gainst manual fixes! O God! God! How weary, stale, flat and unprofitable, Seem to me all the functions of this script! -W. Shakespeare, Hamlet (Epidemiologist Revised Ed.)"
+#> [1] "Of what materials was I made, that I could thus resist so many errors, which, like the turning of the wheel, continually renewed the torture? But I was doomed to live. -M. Shelley, Frankenstein; or, The Modern Prometheus (Epidemiologist Revised Ed.)"
 ```
 
 You can also print newlines or send to the console with cat:
 
 ``` r
 cat(selectquote(nline = T))
-#> Have I not suffered enough, that you seek to increase my misery? My script, although it may only be an accumulation of errors, is dear to me, and I will defend it.
-#> -M. Shelley, Frankenstein; or, The Modern Prometheus (Epidemiologist Revised Ed.)
+#> Don't be overwise; fling yourself straight into troubleshooting, without deliberation; don't be afraid - the flood of errors will bear you to the bank and set you safe on your feet again.
+#> -F. Dostoevsky, Crime and Punishment (Epidemiologist Revised Ed.)
 ```
 
 Formatting quotes in HTML for use in Blastula using
@@ -42,11 +42,11 @@ epierror::selectquote.html():
 
 ``` r
 selectquote.html()
-#> [1] "O, that this too too solid error would melt Thaw and resolve itself into a dew! Or that the Epidemiologist had not fix'd His canon 'gainst manual fixes! O God! God! How weary, stale, flat and unprofitable, Seem to me all the functions of this script! -W. Shakespeare, _Hamlet (Epidemiologist Revised Ed.)_"
+#> [1] "Where is it I've read that an epidemiologist condemned to death says or thinks, an hour before their death, that if they had to troubleshoot an error one thousand times on one thousand different machines, it were better to live so than die at once! Only to live, to live and live! Life, whatever it may be! -F. Dostoevsky, <i>Crime and Punishment (Epidemiologist Revised Ed.)</i>"
 
 # Include a <br /> tag for a newline:
 selectquote.html(nline = T)
-#> [1] "I know now that what makes an epidemiologist is an inability to take even his own good advice.<br />-W. Faulkner, _Light in August (Epidemiologist Revised Ed.)_"
+#> [1] "Now I am become bug, the destroyer of code.<br />-Vishnu, <i>Bhagavad Gita (Epidemiologist Revised Ed.)</i>"
 ```
 
 Finally, quotes can be pulled as a data.frame using
@@ -55,10 +55,10 @@ epierror::getquotes():
 ``` r
 # Select 2 random quotes
 getquotes(2)
-#>                                                                                                           quote
-#> 20 It was the best of times, it was the worst of times.We had everything before us and we had errors before us.
-#> 18                                                                  Now I am become bug, the destroyer of code.
-#>        author                 book
-#> 20 C. Dickens A Tale of Two Cities
-#> 18     Vishnu        Bhagavad Gita
+#>                                                                                                                                                                                                                                      quote
+#> 11 Abhorred script! fiend that thou art! the tortures of hell are too mild a vengeance for thy crimes. Wretched devil! you reproach me with your creation; come on, then, that I may extinguish the error which I so negligently bestowed.
+#> 24                                                                                                                        Being dead is not worse than being an epidemiologist. It is different, though. You could say the view is larger.
+#>           author                                    book
+#> 11    M. Shelley Frankenstein; or, The Modern Prometheus
+#> 24 B. Kingsolver                    The Poisonwood Bible
 ```
